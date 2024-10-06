@@ -29,11 +29,7 @@ class GameScene extends Phaser.Scene {
 
   create() {
     this.staticUnit();
-    this.diamondText = this.add.text(this.scale.width - 115, 45, this.diamond, {
-      font: "bold 28px Arial",
-      align: "center",
-      color: "white",
-    });
+   
     this.spinText = this.add
       .text(this.scale.width / 2, this.scale.height - 80, "Spin", {
         font: "bold 28px Arial",
@@ -90,8 +86,13 @@ class GameScene extends Phaser.Scene {
       .setScale(0.4, 0.8)
       .setAlpha(0.5);
     this.add.sprite(this.scale.width / 9, 60, "buttons", 5).setScale(0.18);
-    this.add.image(this.scale.width - 90, 60, "bar").setScale(0.48, 1.2);
-    this.add.image(this.scale.width - 150, 60, "diamond").setScale(0.3);
+    this.add.image(this.scale.width - 80, 60, "bar").setScale(0.4, 1.2);
+    this.add.image(this.scale.width - 140, 60, "diamond").setScale(0.25);
+     this.diamondText = this.add.text(this.scale.width - 105, 45, this.diamond, {
+      font: "bold 28px Arial",
+      align: "center",
+      color: "white",
+    });
 
     this.anims.create({
       key: "light",
