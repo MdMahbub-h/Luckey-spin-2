@@ -31,7 +31,7 @@ class GameScene extends Phaser.Scene {
     this.staticUnit();
    
     this.spinText = this.add
-      .text(this.scale.width / 2, this.scale.height - 80, "Spin", {
+      .text(this.scale.width / 2, this.scale.height - 75, "Spin", {
         font: "bold 28px Arial",
         align: "center",
         color: "black",
@@ -40,7 +40,7 @@ class GameScene extends Phaser.Scene {
       .setDepth(3);
 
     this.spinBtn = this.add
-      .image(this.scale.width / 2, this.scale.height - 80, "btn")
+      .image(this.scale.width / 2, this.scale.height - 75, "btn")
       .setScale(0.4);
     this.spinBtn.setInteractive({ cursor: "pointer" });
     this.spinBtn.on("pointerdown", () => {
@@ -159,7 +159,7 @@ class GameScene extends Phaser.Scene {
     this.add
       .rectangle(
         this.scale.width / 2,
-        (this.scale.height * 3.75) / 5,
+        (this.scale.height * 3.72) / 5,
         this.scale.width - 20,
         85,
         0x000000,
@@ -169,7 +169,7 @@ class GameScene extends Phaser.Scene {
     this.foodText = this.add
       .text(
         this.scale.width / 2 - 50,
-        (this.scale.height * 3.54) / 5,
+        (this.scale.height * 3.52) / 5,
         "Select a food",
         {
           font: "bold 18px Arial",
