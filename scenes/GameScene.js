@@ -105,7 +105,7 @@ class GameScene extends Phaser.Scene {
 
     this.wheel = this.add
       .sprite(this.scale.width / 2, this.scale.height / 2 -120, "wheel")
-      .setScale(0.50);
+      .setScale(0.60);
     this.middleCircle = this.add
       .sprite(
         this.scale.width / 2,
