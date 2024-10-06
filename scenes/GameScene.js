@@ -160,7 +160,7 @@ selectFood() {
     this.add
       .rectangle(
         this.scale.width / 2,
-        (this.scale.height * 3.2) / 5,
+        (this.scale.height * 3.65) / 5,
         this.scale.width - 20,
         85,
         0x000000,
@@ -170,7 +170,7 @@ selectFood() {
     this.foodText = this.add
       .text(
         this.scale.width / 2 - 50,
-        (this.scale.height * 3.0) / 5,
+        (this.scale.height * 3.45) / 5,
         "Select a food",
         {
           font: "bold 18px Arial",
