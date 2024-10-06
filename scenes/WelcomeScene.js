@@ -42,7 +42,7 @@ class WelcomeScene extends Phaser.Scene {
 
     this.add
       .text(this.scale.width / 2, this.scale.height - 160, "Lucky Draw", {
-        fontSize: 70,
+        fontSize: 50,
         align: "center",
         lineSpacing: 8,
         color: "rgb(255,200,200)",
@@ -55,7 +55,7 @@ class WelcomeScene extends Phaser.Scene {
     let width = this.scale.width;
     let height = this.scale.height;
 
-    let pwidth = width - 200;
+    let pwidth = width - 40;
     let pheight = 10;
 
     let progressBox = this.add.graphics();
