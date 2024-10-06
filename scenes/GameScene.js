@@ -31,7 +31,7 @@ class GameScene extends Phaser.Scene {
     this.staticUnit();
    
     this.spinText = this.add
-      .text(this.scale.width / 2, this.scale.height - 75, "Spin", {
+      .text(this.scale.width / 2, this.scale.height - 70, "Spin", {
         font: "bold 28px Arial",
         align: "center",
         color: "black",
@@ -40,7 +40,7 @@ class GameScene extends Phaser.Scene {
       .setDepth(3);
 
     this.spinBtn = this.add
-      .image(this.scale.width / 2, this.scale.height - 75, "btn")
+      .image(this.scale.width / 2, this.scale.height - 70, "btn")
       .setScale(0.4);
     this.spinBtn.setInteractive({ cursor: "pointer" });
     this.spinBtn.on("pointerdown", () => {
@@ -86,9 +86,9 @@ class GameScene extends Phaser.Scene {
       .setScale(0.4, 0.8)
       .setAlpha(0.5);
     this.add.sprite(this.scale.width / 9, 60, "buttons", 5).setScale(0.18);
-    this.add.image(this.scale.width - 80, 60, "bar").setScale(0.4, 1.2);
-    this.add.image(this.scale.width - 140, 60, "diamond").setScale(0.25);
-     this.diamondText = this.add.text(this.scale.width - 105, 45, this.diamond, {
+    this.add.image(this.scale.width - 60, 60, "bar").setScale(0.3, 1.2);
+    this.add.image(this.scale.width - 100, 60, "diamond").setScale(0.22);
+     this.diamondText = this.add.text(this.scale.width - 95, 45, this.diamond, {
       font: "bold 28px Arial",
       align: "center",
       color: "white",
@@ -170,7 +170,7 @@ selectFood() {
     this.foodText = this.add
       .text(
         this.scale.width / 2 - 50,
-        (this.scale.height * 3.45) / 5,
+        (this.scale.height * 3.42) / 5,
         "Select a food",
         {
           font: "bold 18px Arial",
@@ -320,8 +320,8 @@ selectFood() {
   selectDiamond() {
     this.bidText = this.add.text(
       this.scale.width / 13,
-      (this.scale.height * 4.05) / 5,
-      "Bid: ",
+      (this.scale.height * 4.09) / 5,
+      "Bid : ",
       {
         font: "bold 24px Arial",
         align: "center",
@@ -331,11 +331,11 @@ selectFood() {
     for (let i = 0; i < 4; i++) {
       this.add
         .image(
-          (this.scale.width * (i + 2) + i * 30) / 6,
+          (this.scale.width * (i + 2) + i * 30) / 6-15,
           (this.scale.height * 4.15) / 5,
           "bar"
         )
-        .setScale(0.2, 1);
+        .setScale(0.22, 1);
       this.add
         .image(
           (this.scale.width * (i + 2) + i * 30) / 6 + 3,
