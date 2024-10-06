@@ -155,12 +155,13 @@ class GameScene extends Phaser.Scene {
     });
   }
 
+
   selectFood() {
     this.add
       .rectangle(
         this.scale.width / 2,
-        (this.scale.height * 3.72) / 5,
-        this.scale.width - 20,
+        (this.scale.height * 3.7) / 5,
+        this.scale.width - 50,
         85,
         0x000000,
         0.4
@@ -182,7 +183,7 @@ class GameScene extends Phaser.Scene {
     this.burger = this.add
       .sprite(
         (this.scale.width * 1) / 9,
-        (this.scale.height * 3.79) / 5,
+        (this.scale.height * 3.74) / 5,
         "foods",
         0
       )
@@ -198,7 +199,7 @@ class GameScene extends Phaser.Scene {
     this.juice = this.add
       .sprite(
         (this.scale.width * 2) / 9,
-        (this.scale.height * 3.79) / 5,
+        (this.scale.height * 3.74) / 5,
         "foods",
         1
       )
@@ -214,7 +215,7 @@ class GameScene extends Phaser.Scene {
     this.pizza = this.add
       .sprite(
         (this.scale.width * 3) / 9,
-        (this.scale.height * 3.79) / 5,
+        (this.scale.height * 3.74) / 5,
         "foods",
         2
       )
@@ -230,7 +231,7 @@ class GameScene extends Phaser.Scene {
     this.icecreem = this.add
       .sprite(
         (this.scale.width * 4) / 9,
-        (this.scale.height * 3.79) / 5,
+        (this.scale.height * 3.74) / 5,
         "foods",
         3
       )
@@ -246,7 +247,7 @@ class GameScene extends Phaser.Scene {
     this.donut = this.add
       .sprite(
         (this.scale.width * 5) / 9,
-        (this.scale.height * 3.79) / 5,
+        (this.scale.height * 3.74) / 5,
         "foods",
         4
       )
@@ -262,7 +263,7 @@ class GameScene extends Phaser.Scene {
     this.frenchFry = this.add
       .sprite(
         (this.scale.width * 6) / 9,
-        (this.scale.height * 3.79) / 5,
+        (this.scale.height * 3.74) / 5,
         "foods",
         5
       )
@@ -278,7 +279,7 @@ class GameScene extends Phaser.Scene {
     this.hotdog = this.add
       .sprite(
         (this.scale.width * 7) / 9,
-        (this.scale.height * 3.79) / 5,
+        (this.scale.height * 3.74) / 5,
         "foods",
         6
       )
@@ -294,7 +295,7 @@ class GameScene extends Phaser.Scene {
     this.salad = this.add
       .sprite(
         (this.scale.width * 8) / 9,
-        (this.scale.height * 3.79) / 5,
+        (this.scale.height * 3.74) / 5,
         "foods",
         7
       )
@@ -316,7 +317,6 @@ class GameScene extends Phaser.Scene {
     this.foods.push(this.hotdog);
     this.foods.push(this.salad);
   }
-
   selectDiamond() {
     this.bidText = this.add.text(
       this.scale.width / 13,
