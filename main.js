@@ -10,8 +10,8 @@ const scale = {
   width: 600,
   height: 1200,
 };
-if (window.innerWidth < 600 * 1.1) {
-  scale.width = window.innerWidth * 0.9;
+if (window.innerWidth < 600) {
+  scale.width = window.innerWidth;
   scale.height = (scale.width * 1200) / 600;
 }
 
