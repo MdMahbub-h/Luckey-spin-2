@@ -505,7 +505,7 @@ selectFood() {
           (this.scale.height * 2.5) / 7,
           "Better Luck",
           {
-            fontSize: 640,
+            fontSize: 40,
             align: "center",
             lineSpacing: 8,
             color: "rgb(255,250,250)",
