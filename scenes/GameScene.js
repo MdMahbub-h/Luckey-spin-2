@@ -87,9 +87,9 @@ class GameScene extends Phaser.Scene {
       .setAlpha(0.5);
     this.add.sprite(this.scale.width / 9, 60, "buttons", 5).setScale(0.18);
     this.add.image(this.scale.width - 60, 60, "bar").setScale(0.3, 1);
-    this.add.image(this.scale.width - 100, 60, "diamond").setScale(0.22);
+    this.add.image(this.scale.width - 105, 60, "diamond").setScale(0.22);
      this.diamondText = this.add.text(this.scale.width - 75, 45, this.diamond, {
-      font: "bold 28px Arial",
+      font: "bold 24px Arial",
       align: "center",
       color: "white",
     });
@@ -335,14 +335,14 @@ selectFood() {
           (this.scale.height * 4.16) / 5,
           "bar"
         )
-        .setScale(0.23, .9);
+        .setScale(0.24, .9);
       this.add
         .image(
           (this.scale.width * (i + 2) + i * 30) / 6 + 3,
           (this.scale.height * 4.16) / 5,
           "diamond"
         )
-        .setScale(0.12);
+        .setScale(0.1);
     }
 
     this.bid10 = this.add
