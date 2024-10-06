@@ -23,7 +23,7 @@ class StartScene extends Phaser.Scene {
       .setWordWrapWidth(600)
       .setOrigin(0.5);
     this.add
-      .text(this.scale.width / 2, 280, "Play and win the prize!!!", {
+      .text(this.scale.width / 2, 260, "Play and win the prize!!!", {
         fontSize: 30,
         align: "center",
         lineSpacing: 8,
@@ -34,11 +34,11 @@ class StartScene extends Phaser.Scene {
       .setWordWrapWidth(600)
       .setOrigin(0.5);
     this.btn = this.add
-      .image(this.scale.width / 2, this.scale.height - 180, "btn")
-      .setScale(0.5);
+      .image(this.scale.width / 2, this.scale.height - 120, "btn")
+      .setScale(0.4);
     this.playText = this.add
-      .text(this.scale.width / 2, this.scale.height - 180, "Play", {
-        fontSize: 40,
+      .text(this.scale.width / 2, this.scale.height - 120, "Play", {
+        fontSize: 30,
         align: "center",
         lineSpacing: 8,
         color: "black",
