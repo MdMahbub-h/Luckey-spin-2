@@ -36,7 +36,7 @@ class GameScene extends Phaser.Scene {
     });
     this.spinText = this.add
       .text(this.scale.width / 2, this.scale.height - 80, "Spin", {
-        font: "bold 32px Arial",
+        font: "bold 28px Arial",
         align: "center",
         color: "black",
       })
@@ -45,7 +45,7 @@ class GameScene extends Phaser.Scene {
 
     this.spinBtn = this.add
       .image(this.scale.width / 2, this.scale.height - 80, "btn")
-      .setScale(0.5);
+      .setScale(0.4);
     this.spinBtn.setInteractive({ cursor: "pointer" });
     this.spinBtn.on("pointerdown", () => {
       if (this.canSpin) {
@@ -89,7 +89,7 @@ class GameScene extends Phaser.Scene {
       .image(this.scale.width / 2, this.scale.height / 2, "game-bg")
       .setScale(0.4, 0.8)
       .setAlpha(0.5);
-    this.add.sprite(this.scale.width / 9, 60, "buttons", 5).setScale(0.2);
+    this.add.sprite(this.scale.width / 9, 60, "buttons", 5).setScale(0.18);
     this.add.image(this.scale.width - 90, 60, "bar").setScale(0.48, 1.2);
     this.add.image(this.scale.width - 150, 60, "diamond").setScale(0.3);
 
@@ -105,7 +105,7 @@ class GameScene extends Phaser.Scene {
 
     this.wheel = this.add
       .sprite(this.scale.width / 2, this.scale.height / 2 - 120, "wheel")
-      .setScale(0.85);
+      .setScale(0.70);
     this.middleCircle = this.add
       .sprite(
         this.scale.width / 2,
@@ -116,7 +116,7 @@ class GameScene extends Phaser.Scene {
 
     this.wheelCover = this.add
       .sprite(this.scale.width / 2, this.scale.height / 2 - 75, "wheel-cover")
-      .setScale(1.35);
+      .setScale(1.35*.70/.85);
     this.wheelCover.anims.play("light");
   }
 
@@ -159,7 +159,7 @@ class GameScene extends Phaser.Scene {
       .rectangle(
         this.scale.width / 2,
         (this.scale.height * 3.75) / 5,
-        this.scale.width - 50,
+        this.scale.width - 20,
         85,
         0x000000,
         0.4
@@ -168,7 +168,7 @@ class GameScene extends Phaser.Scene {
     this.foodText = this.add
       .text(
         this.scale.width / 2 - 50,
-        (this.scale.height * 3.57) / 5,
+        (this.scale.height * 3.54) / 5,
         "Select a food",
         {
           font: "bold 18px Arial",
@@ -318,11 +318,11 @@ class GameScene extends Phaser.Scene {
 
   selectDiamond() {
     this.bidText = this.add.text(
-      this.scale.width / 12,
+      this.scale.width / 13,
       (this.scale.height * 4.05) / 5,
       "Bid: ",
       {
-        font: "bold 32px Arial",
+        font: "bold 24px Arial",
         align: "center",
         color: "rgb(255,250,250)",
       }
@@ -330,18 +330,18 @@ class GameScene extends Phaser.Scene {
     for (let i = 0; i < 4; i++) {
       this.add
         .image(
-          (this.scale.width * (i + 2) + i * 30) / 6 - 15,
+          (this.scale.width * (i + 2) + i * 30) / 6,
           (this.scale.height * 4.15) / 5,
           "bar"
         )
-        .setScale(0.3, 1.25);
+        .setScale(0.2, 1);
       this.add
         .image(
           (this.scale.width * (i + 2) + i * 30) / 6 + 3,
-          (this.scale.height * 4.14) / 5,
+          (this.scale.height * 4.15) / 5,
           "diamond"
         )
-        .setScale(0.13);
+        .setScale(0.12);
     }
 
     this.bid10 = this.add
