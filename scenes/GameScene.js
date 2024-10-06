@@ -448,7 +448,7 @@ selectFood() {
           (this.scale.height * 2.4) / 7,
           "You Win !!!",
           {
-            fontSize: 60,
+            fontSize: 40,
             align: "center",
             lineSpacing: 8,
             color: "rgb(255,250,250)",
@@ -464,7 +464,7 @@ selectFood() {
           (this.scale.height * 3) / 7,
           this.bidAmmount * 2,
           {
-            fontSize: 60,
+            fontSize: 40,
             align: "center",
             lineSpacing: 8,
             color: "rgb(255,10,200)",
@@ -480,7 +480,7 @@ selectFood() {
           (this.scale.height * 3) / 7,
           "diamond"
         )
-        .setScale(0.27)
+        .setScale(0.2)
         .setDepth(6);
 
       setTimeout(() => {
@@ -505,7 +505,7 @@ selectFood() {
           (this.scale.height * 2.5) / 7,
           "Better Luck",
           {
-            fontSize: 60,
+            fontSize: 640,
             align: "center",
             lineSpacing: 8,
             color: "rgb(255,250,250)",
@@ -517,7 +517,7 @@ selectFood() {
         .setOrigin(0.5);
       let text2 = this.add
         .text(this.scale.width / 2, (this.scale.height * 3) / 7, "Next Time", {
-          fontSize: 60,
+          fontSize: 40,
           align: "center",
           lineSpacing: 8,
           color: "rgb(255,250,250)",
