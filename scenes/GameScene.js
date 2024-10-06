@@ -347,7 +347,7 @@ selectFood() {
 
     this.bid10 = this.add
       .text(
-        (this.scale.width * (0 + 2) + 0 * 30) / 6 - 45,
+        (this.scale.width * (0 + 2) + 0 * 30) / 6 - 40,
         (this.scale.height * 4.07) / 5,
         "10",
         {
@@ -365,7 +365,7 @@ selectFood() {
         }
       });
     this.bid20 = this.add.text(
-      (this.scale.width * (1 + 2) + 1 * 30) / 6 - 45,
+      (this.scale.width * (1 + 2) + 1 * 30) / 6 - 40,
       (this.scale.height * 4.07) / 5,
       "20",
       {
@@ -383,7 +383,7 @@ selectFood() {
       }
     });
     this.bid30 = this.add.text(
-      (this.scale.width * (2 + 2) + 2 * 30) / 6 - 45,
+      (this.scale.width * (2 + 2) + 2 * 30) / 6 - 40,
       (this.scale.height * 4.07) / 5,
       "30",
       {
@@ -401,7 +401,7 @@ selectFood() {
       }
     });
     this.bid50 = this.add.text(
-      (this.scale.width * (3 + 2) + 3 * 30) / 6 - 45,
+      (this.scale.width * (3 + 2) + 3 * 30) / 6 - 40,
       (this.scale.height * 4.07) / 5,
       "50",
       {
