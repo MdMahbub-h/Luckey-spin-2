@@ -104,7 +104,7 @@ class GameScene extends Phaser.Scene {
     });
 
     this.wheel = this.add
-      .sprite(this.scale.width / 2, this.scale.height / 2 -120, "wheel")
+      .sprite(this.scale.width / 2, this.scale.height / 2 -80, "wheel")
       .setScale(0.60);
     this.middleCircle = this.add
       .sprite(
@@ -115,7 +115,7 @@ class GameScene extends Phaser.Scene {
       .setScale(0.1);
 
     this.wheelCover = this.add
-      .sprite(this.scale.width / 2, this.scale.height / 2 -90, "wheel-cover")
+      .sprite(this.scale.width / 2, this.scale.height / 2 -50, "wheel-cover")
       .setScale(.9);
     this.wheelCover.anims.play("light");
   }
