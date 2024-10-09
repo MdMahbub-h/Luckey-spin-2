@@ -29,9 +29,9 @@ class GameScene extends Phaser.Scene {
 
   create() {
     this.staticUnit();
-   
+
     this.spinText = this.add
-      .text(this.scale.width / 2, this.scale.height - 70, "Spin", {
+      .text(this.scale.width / 2, this.scale.height - 65, "Spin", {
         font: "bold 28px Arial",
         align: "center",
         color: "black",
@@ -40,8 +40,8 @@ class GameScene extends Phaser.Scene {
       .setDepth(3);
 
     this.spinBtn = this.add
-      .image(this.scale.width / 2, this.scale.height - 70, "btn")
-      .setScale(0.4);
+      .image(this.scale.width / 2, this.scale.height - 65, "btn")
+      .setScale(0.4, 0.35);
     this.spinBtn.setInteractive({ cursor: "pointer" });
     this.spinBtn.on("pointerdown", () => {
       if (this.canSpin) {
@@ -85,14 +85,58 @@ class GameScene extends Phaser.Scene {
       .image(this.scale.width / 2, this.scale.height / 2, "game-bg")
       .setScale(0.4, 0.8)
       .setAlpha(0.5);
-    this.add.sprite(this.scale.width / 9, 60, "buttons", 5).setScale(0.18);
-    this.add.image(this.scale.width - 60, 60, "bar").setScale(0.3, 1);
-    this.add.image(this.scale.width - 105, 60, "diamond").setScale(0.22);
-     this.diamondText = this.add.text(this.scale.width - 75, 45, this.diamond, {
-      font: "bold 24px Arial",
-      align: "center",
-      color: "white",
+
+    this.backBtn = this.add
+      .sprite(this.scale.width / 13, 40, "buttons", 1)
+      .setScale(0.12)
+      .setOrigin(0.5)
+      .setAngle(-180);
+    this.timeBtn = this.add
+      .sprite(this.scale.width - 30, 40, "buttons", 5)
+      .setScale(0.12)
+      .setOrigin(0.5);
+    this.soundBtn = this.add
+      .sprite(this.scale.width - 75, 40, "buttons", 8)
+      .setScale(0.12)
+      .setOrigin(0.5);
+
+    this.headingText = this.add
+      .text(this.scale.width / 13 + 100, 40, "Lucky Spin ", {
+        font: "bold 26px Arial",
+        align: "center",
+        color: "rgb(255,200,250)",
+      })
+      .setOrigin(0.5);
+
+    this.moreBtn = this.add
+      .sprite(this.scale.width / 13, 95, "btn")
+      .setScale(0.44, 0.22)
+      .setOrigin(0.5)
+      .setInteractive({ cursor: "pointer" });
+
+    this.moreText = this.add
+      .text(this.scale.width / 8, 95, "More🎮", {
+        font: "bold 20px Arial",
+        align: "center",
+        color: "rgb(20,20,20)",
+      })
+      .setOrigin(0.5);
+    this.moreBtn.on("pointerover", () => {
+      this.moreText.setColor("white");
     });
+    this.moreBtn.on("pointerout", () => {
+      this.moreText.setColor("balck");
+    });
+
+    this.add.image(this.scale.width - 55, 90, "bar").setScale(0.3, 0.9);
+    this.add.image(this.scale.width - 95, 90, "diamond").setScale(0.19);
+    this.diamondText = this.add
+      .text(this.scale.width - 55, 90, this.diamond, {
+        font: "bold 24px Arial",
+        align: "center",
+        color: "white",
+      })
+      .setOrigin(0.5);
 
     this.anims.create({
       key: "light",
@@ -105,19 +149,15 @@ class GameScene extends Phaser.Scene {
     });
 
     this.wheel = this.add
-      .sprite(this.scale.width / 2, this.scale.height / 2 -90, "wheel")
-      .setScale(0.60);
+      .sprite(this.scale.width / 2, this.scale.height / 2 - 90, "wheel")
+      .setScale(0.6);
     this.middleCircle = this.add
-      .sprite(
-        this.scale.width / 2,
-        this.scale.height / 2 - 90,
-        "middle-circle"
-      )
+      .sprite(this.scale.width / 2, this.scale.height / 2 - 90, "middle-circle")
       .setScale(0.1);
 
     this.wheelCover = this.add
-      .sprite(this.scale.width / 2, this.scale.height / 2 -60, "wheel-cover")
-      .setScale(.9);
+      .sprite(this.scale.width / 2, this.scale.height / 2 - 60, "wheel-cover")
+      .setScale(0.9);
     this.wheelCover.anims.play("light");
   }
 
@@ -155,8 +195,7 @@ class GameScene extends Phaser.Scene {
     });
   }
 
-
-selectFood() {
+  selectFood() {
     this.add
       .rectangle(
         this.scale.width / 2,
@@ -321,7 +360,7 @@ selectFood() {
     this.bidText = this.add.text(
       this.scale.width / 13,
       (this.scale.height * 4.09) / 5,
-      "Bid : ",
+      "Bid: ",
       {
         font: "bold 24px Arial",
         align: "center",
@@ -331,11 +370,11 @@ selectFood() {
     for (let i = 0; i < 4; i++) {
       this.add
         .image(
-          (this.scale.width * (i + 2) + i * 30) / 6-15,
+          (this.scale.width * (i + 2) + i * 30) / 6 - 15,
           (this.scale.height * 4.16) / 5,
           "bar"
         )
-        .setScale(0.24, .9);
+        .setScale(0.24, 0.9);
       this.add
         .image(
           (this.scale.width * (i + 2) + i * 30) / 6 + 3,
