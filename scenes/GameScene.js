@@ -92,19 +92,19 @@ class GameScene extends Phaser.Scene {
       .setOrigin(0.5)
       .setAngle(-180);
     this.timeBtn = this.add
-      .sprite(this.scale.width - 30, 40, "buttons", 5)
+      .sprite(this.scale.width - 35, 40, "buttons", 5)
       .setScale(0.12)
       .setOrigin(0.5);
     this.soundBtn = this.add
-      .sprite(this.scale.width - 75, 40, "buttons", 8)
+      .sprite(this.scale.width - 80, 40, "buttons", 8)
       .setScale(0.12)
       .setOrigin(0.5);
 
     this.headingText = this.add
-      .text(this.scale.width / 13 + 100, 40, "Lucky Spin ", {
-        font: "bold 26px Arial",
+      .text(this.scale.width / 13 + 100, 40, "Lucky Wheel ", {
+        font: "bold 28px Arial",
         align: "center",
-        color: "rgb(255,200,250)",
+        color: "rgb(255,220,250)",
       })
       .setOrigin(0.5);
 
@@ -115,7 +115,7 @@ class GameScene extends Phaser.Scene {
       .setInteractive({ cursor: "pointer" });
 
     this.moreText = this.add
-      .text(this.scale.width / 8, 95, "More🎮", {
+      .text(this.scale.width / 8, 95, "More 🎮", {
         font: "bold 20px Arial",
         align: "center",
         color: "rgb(20,20,20)",
